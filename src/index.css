@@ -1,68 +1,368 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  font-family: "Urbanist", sans-serif;
+}
+
+:root {
+  --orange: #ff5c00;
+  --blue: #003b59;
+  --white: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.btn_primary {
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 600;
+  box-shadow: 0 0 0 rgba(255, 165, 0, 0.7);
+  animation: pulsate 1.5s infinite;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* SUBHEADER */
+
+.subheader {
+  display: none;
+  background-color: #ff5c00;
+  width: 100%;
+  padding: 0 1rem;
+  position: absolute;
+  top: 0;
+  height: 2.25rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.subheader_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.subheader_container ul {
+  list-style: none;
+}
+
+.subheader .contact_info {
+  display: flex;
+  gap: 1rem;
+}
+
+.subheader .contact_info li,
+.subheader .social_media li {
+  display: flex;
+  gap: .5rem;
+  color: var(--white);
+  align-items: center;
+}
+
+.subheader .contact_info li a,
+.subheader .social_media li a {
+  color: var(--white);
+}
+
+.subheader_container li svg {
+  color: var(--white);
+}
+
+.subheader .social_media {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.subheader .social_media-icons {
+  display: flex;
+  align-items: center;
+}
+
+.subheader_container li hr {
+  height: 1rem;
+  border: none;
+  width: 1px;
+  background-color: var(--white);
+}
+
+@media screen and (min-width:992px) {
+  .subheader {
+    display: block;
+    padding: 0;
   }
-  a:hover {
-    color: #747bff;
+}
+
+/* NAVBAR */
+nav {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  top: 2.1rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: transparent;
+  transition: background-color 0.4s ease;
+}
+
+.navbar_scrolled {
+  position: fixed;
+  top: 0;
+  background-color: var(--blue);
+  transition: background-color 0.4s ease;
+}
+
+
+.navbar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar_logo {
+  width: 8rem;
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 165, 0, 0.7);
   }
-  button {
-    background-color: #f9f9f9;
+
+  50% {
+    box-shadow: 0 0 0 20px rgba(255, 165, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 165, 0, 0);
+  }
+}
+
+@media screen and (min-width:992px) {
+  nav {
+    padding: 0;
+  }
+}
+
+
+/* HERO */
+.hero {
+  background-image: url('./assets/home.webp');
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: calc(800px - 1500px);
+}
+
+.hero_overlay {
+  background: rgb(0, 59, 89);
+  background: linear-gradient(90deg, rgba(0, 59, 89, 1) 0%, rgba(0, 59, 89, 0) 100%);
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (min-width:768px) {
+  .hero {
+    background-position: calc(800px - 1300px);
+  }
+}
+
+@media screen and (min-width:992px) {
+  .hero {
+    background-position: inherit;
+  }
+}
+
+.hero_texts {
+  position: relative;
+  text-align: center;
+  padding: 0 1rem;
+  top: 17rem;
+  height: 100%;
+  color: var(--white);
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero_texts h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: .6rem 0;
+  line-height: 1;
+}
+
+.hero_texts span {
+  color: var(--orange);
+}
+
+.hero_subtitle {
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero_paragraph {
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.hero_btns {
+  position: relative;
+  top: 20rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.hero_btns svg {
+  color: var(--orange);
+}
+
+.btn_video {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--white);
+}
+
+@media screen and (min-width:768px) {
+  .hero_texts {
+    text-align: left;
+    padding: 0 2rem;
+    top: 18rem;
+  }
+  .hero_btns {
+    justify-content: left;
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .hero_texts {
+    padding: 0;
+  }
+  .hero_btns {
+    padding: 0;
+  }
+}
+
+
+
+
+
+/* ANIMISTA */
+
+.tilt-in-left-1 {
+  -webkit-animation: tilt-in-left-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: tilt-in-left-1 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-7-31 0:2:1
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tilt-in-left-1
+ * ----------------------------------------
+ */
+@-webkit-keyframes tilt-in-left-1 {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes tilt-in-left-1 {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+.tilt-in-bottom-1 {
+  -webkit-animation: tilt-in-bottom-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: tilt-in-bottom-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-7-31 0:14:26
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tilt-in-bottom-1
+ * ----------------------------------------
+ */
+@-webkit-keyframes tilt-in-bottom-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+    transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+    transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes tilt-in-bottom-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+    transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+    transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
   }
 }
