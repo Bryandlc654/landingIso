@@ -43,6 +43,16 @@ address {
   animation: pulsate 1.5s infinite;
 }
 
+.section_title{
+  margin: 2rem 0;
+  color: var(--blue);
+  text-align: center;
+}
+
+.section_title-resalt{
+  color: var(--orange);
+}
+
 /* SUBHEADER */
 
 .subheader {
@@ -256,6 +266,7 @@ nav {
     padding: 0 2rem;
     top: 18rem;
   }
+
   .hero_btns {
     justify-content: left;
     padding: 0 2rem;
@@ -266,12 +277,50 @@ nav {
   .hero_texts {
     padding: 0;
   }
+
   .hero_btns {
     padding: 0;
   }
 }
 
+/* CARROUSEL */
 
+.carrousel_logo{
+  width: 100px;
+  margin: 0 20px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.scroll {
+  position: relative;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.scroll div {
+  margin: 1rem 0;
+  white-space: nowrap;
+  animation: animate 30s linear infinite;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll:hover div {
+  animation-play-state: paused;
+}
 
 
 
