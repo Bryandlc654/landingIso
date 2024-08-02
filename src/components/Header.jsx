@@ -60,7 +60,7 @@ const Header = () => {
                     </ul>
                 </div>
             </header>
-            <nav className={`navbar ${scrolled ? 'navbar_scrolled' : ''}`}>
+            <nav className={`navbar px-2 ${scrolled ? 'navbar_scrolled' : ''}`}>
                 <div className='container navbar_container'>
                     <a href="#" title="Ir a inicio">
                         <img src={Logo} className='navbar_logo' alt="R y C Ingenieria Consultiva" />
