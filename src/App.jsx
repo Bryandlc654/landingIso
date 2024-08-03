@@ -5,6 +5,7 @@ import About from "./components/About"
 import Banner from "./components/Banner"
 import Procesess from "./components/Procesess"
 import Cta from "./components/Cta"
+import SecFaqs from "./components/SecFaqs"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Banner></Banner>
       <Procesess></Procesess>
       <Cta></Cta>
+      <SecFaqs></SecFaqs>
     </>
   )
 }

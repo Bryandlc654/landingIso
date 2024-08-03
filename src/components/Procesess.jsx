@@ -21,29 +21,36 @@ const Procesess = () => {
                             <article className="process">
                                 <p className="process__number">01</p>
                                 <p className="process__title">
-                                    <strong>Evaluación Inicial</strong>
+                                    <strong>Gana Licitaciones</strong>
                                 </p>
                                 <p className="process__paragraph paragraph">
-                                    Analizamos tus necesidades y establecemos un plan personalizado de
-                                    asesorías
+                                    Suma puntos en
+                                    tus licitaciones
+                                    con el estado.
                                 </p>
                             </article>
                             <article className="process">
                                 <p className="process__number">02</p>
                                 <p className="process__title">
-                                    <strong>Desarrollo y Entregas</strong>
+                                    <strong>Mejora la competitividad</strong>
                                 </p>
                                 <p className="process__paragraph paragraph">
-                                    Trabajamos en entregas parciales, brindando informes de progreso
+                                    Aumenta la
+                                    reputación de tu
+                                    empresa.
                                 </p>
                             </article>
                             <article className="process">
                                 <p className="process__number">03</p>
                                 <p className="process__title">
-                                    <strong>Revisión y Finalización</strong>
+                                    <strong>ACCEDE A MÁS
+                                        CLIENTES
+                                    </strong>
                                 </p>
                                 <p className="process__paragraph paragraph">
-                                    Realizamos revisiones detalladas y preparamos tu presentación final
+                                    Genera mayor
+                                    confianza en tus
+                                    clientes.
                                 </p>
                             </article>
                         </div>
