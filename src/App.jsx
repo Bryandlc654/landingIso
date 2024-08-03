@@ -2,6 +2,7 @@ import Carrousel from "./components/Carrousel"
 import Header from "./components/Header"
 import Faqs from "./components/Faqs"
 import About from "./components/About"
+import Banner from "./components/Banner"
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Carrousel></Carrousel>
       <Faqs></Faqs>
       <About></About>
+      <Banner></Banner>
     </>
   )
 }
