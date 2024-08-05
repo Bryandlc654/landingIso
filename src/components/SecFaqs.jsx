@@ -2,7 +2,7 @@
 const SecFaqs = () => {
     return (
         <>
-            <section className='px-2'>
+            <section className='px-2 section-gray'>
                 <div>
                     <p className='section_subtitle'>Resuelve tus Dudas</p>
                     <h2 className='section_title'>

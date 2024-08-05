@@ -6,6 +6,8 @@ import Banner from "./components/Banner"
 import Procesess from "./components/Procesess"
 import Cta from "./components/Cta"
 import SecFaqs from "./components/SecFaqs"
+import Contact from "./components/Contact"
+import CarrouselIso from "./components/CarrouselIso"
 
 function App() {
 
@@ -15,10 +17,12 @@ function App() {
       <Carrousel></Carrousel>
       <Faqs></Faqs>
       <About></About>
+      <CarrouselIso></CarrouselIso>
       <Banner></Banner>
       <Procesess></Procesess>
       <Cta></Cta>
       <SecFaqs></SecFaqs>
+      <Contact></Contact>
     </>
   )
 }
