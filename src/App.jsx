@@ -8,6 +8,8 @@ import Cta from "./components/Cta"
 import SecFaqs from "./components/SecFaqs"
 import Contact from "./components/Contact"
 import CarrouselIso from "./components/CarrouselIso"
+import Footer from "./components/Footer"
+import OtherIsos from "./components/OtherIsos"
 
 function App() {
 
@@ -18,11 +20,13 @@ function App() {
       <Faqs></Faqs>
       <About></About>
       <CarrouselIso></CarrouselIso>
+      <OtherIsos></OtherIsos>
       <Banner></Banner>
       <Procesess></Procesess>
       <Cta></Cta>
       <SecFaqs></SecFaqs>
       <Contact></Contact>
+      <Footer></Footer>
     </>
   )
 }

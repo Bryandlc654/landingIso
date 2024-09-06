@@ -5,12 +5,16 @@ import Logo4 from '../assets/empresa-4.webp'
 import Logo5 from '../assets/empresa-5.webp'
 import Logo6 from '../assets/empresa-6.webp'
 import Globe from '../assets/globe.png'
+import { useInView } from 'react-intersection-observer';
+
 const Carrousel = () => {
+    const { ref: carrouselRef, inView: carrouselInView } = useInView({ threshold: 0.5 });
+
     return (
         <>
             <div className='section__carrousel'>
                 <img src={Globe} alt="" className='globe_carrousel'/>
-                <div>
+                <div ref={carrouselRef} className={`hidden ${carrouselInView? 'scale-in-top' : 'fade-in'}`}>
                     <p className='section_subtitle'>Te garantizamos</p>
                     <h2 className='section_title px-2'>
                         Acreditación <span className='section_title-resalt'>INTERNACIONAL</span> o <span className='section_title-resalt'>NACIONAL</span>
